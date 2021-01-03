@@ -80,6 +80,7 @@ public class StudentControllerServlet extends HttpServlet {
 				addStudent(request, response);
 				break;
 				
+				// if no command is passed, then default to listing students
 			default:
 				listStudents(request, response);
 			}
@@ -96,6 +97,7 @@ public class StudentControllerServlet extends HttpServlet {
 	}
 
 
+	// calling this method returns the data to the JSP - list-students.jsp
 	private void listStudents(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		
 		// get Students from db util
